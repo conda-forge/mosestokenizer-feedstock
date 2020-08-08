@@ -1,5 +1,5 @@
 {% set name = "mosestokenizer" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d65a781add83e93612a5e491a2cfc9c3740048b8a028556a4e23fceb1a7d48a
+  sha256: 27520b3156bc43457ef4272eb8dc40d865e9d0160422e32256ed436df0f00261
 
 build:
   number: 0
