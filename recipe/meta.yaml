@@ -1,13 +1,13 @@
 {% set name = "mosestokenizer" %}
-{% set version = "1.0.0" %}
+{% set version = "1.2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d65a781add83e93612a5e491a2cfc9c3740048b8a028556a4e23fceb1a7d48a
+  sha256: 438b3e35a221f7930c408e97e3f38af6d0cec74b991eb9edb00a44e3510e836d
 
 build:
   number: 0
@@ -17,7 +17,7 @@ build:
     - moses-detokenizer=mosestokenizer.detokenizer:main
     - moses-punct-normalizer=mosestokenizer.punctnormalizer:main
     - moses-sent-splitter=mosestokenizer.sentsplitter:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -45,7 +45,7 @@ about:
   home: https://bitbucket.org/luismsgomes/mosestokenizer
   license: GPL-2.0
   license_family: LGPL
-  license_file: LICENSE 
+  license_file: LICENSE
   summary: Wrappers for several pre-processing scripts from the Moses toolkit.
   doc_url: https://bitbucket.org/luismsgomes/mosestokenizer
 
